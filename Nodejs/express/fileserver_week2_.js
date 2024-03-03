@@ -10,7 +10,7 @@ app.use(express.json());
 const fs=require("fs");
 
 function readasync(name){
-    return new Promise(function(resolve){
+    return new Promise(function(resolve,reject){
         fs.readFile(name,"utf-8",function(err,data){
             if(err){
                 reject(err);
@@ -22,7 +22,7 @@ function readasync(name){
 }
 
 function readDirAsync(dirname){
-    return new Promise(function(resolve){
+    return new Promise(function(resolve,reject){
         fs.readdir(dirname, function(err,files){
             if(err){
                 reject(err);
@@ -42,7 +42,7 @@ app.get("/file/:filename",function(req,res){
         res.send({data});
     }).catch(function(error){
         console.error(error);
-        res.status(500).send({ error: 'Internal Server Error' });
+        res.status(404).send( 'File not found' );
     })
     
 })
@@ -51,7 +51,7 @@ app.get("/:dirName",function(req,res){
     const dirName=req.params.dirName;
     readDirAsync(dirName).then(function(files){
         res.send({files});
-    }).catch(function(err){
+    }).catch(function(error){
         console.error(error);
         res.status(500).send({ error: 'Internal Server Error' });
     })
