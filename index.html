@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div>
+    <input oninput="debouncedf2()" id="num1" type="text" placeholder="first number">
+    <br/>
+    <br/>
+    <input oninput="debouncedf2()" id="num2" type="text" placeholder="first number">
+    <br/>
+    <br/>
+    <button  onclick="f1()">add</button>
+    <br/>
+    <h1>Ans</h1>
+    <p id="ans"></p>
+    <h1>History</h1>
+  </div>
+  <div>
+    <input oninput="debouncedf10()" type="text" id="p" placeholder="Principle">
+    <br>
+    <input oninput="debouncedf10()" type="text" id="r" placeholder="Rate">
+    <br>
+    <input oninput="debouncedf10()" type="text" id="t" placeholder="Time">
+
+    <br>
+    <h1 id="hh"></h1>
+  </div>
+  <!-- <button onclick="getData()">Get Data</button> -->
+  <script src="script.js"></script>
+</body>
+
+</html>
