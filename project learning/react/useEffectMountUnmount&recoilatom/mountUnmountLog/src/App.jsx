@@ -13,9 +13,17 @@ function App() {
 }
 
 function IndsideRecoilComponent(){
-  const [renders2,setRender2]= useRecoilState(render);
+  const renders2= useRecoilValue(render);
+  const [renders1 , setRender1] = useState(true);
+  useEffect(()=>{
+    const blink = setInterval(()=>{
+      setRender1(renders1=>!renders1);
+    },5000)
+    return ()=> clearInterval(blink)
+  },[])
 
   return <div>
+      {renders1?<div>hi you </div>:<></>}
       <MyComponent></MyComponent>
       {renders2?<MyComponent2/>:<></>}
   </div>
