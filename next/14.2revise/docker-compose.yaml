@@ -1,0 +1,20 @@
+version: '3.8'
+services:
+  postgres:
+    image: "postgres"
+    container_name: postgresdb
+    ports:
+      - 5457:5432
+    volumes:
+      - postgresdb:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: password
+  backend:
+    image: nextdemo
+    container_name: backend_application
+    ports:
+      - 3005:3000
+    environment:
+      DATABASE_URL: postgresql://postgres:password@postgresdb:5432/postgres
+volumes:
+  postgresdb:

@@ -1,0 +1,88 @@
+*{
+    background-color: rgb(165, 165, 165);
+}
+.container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  #title{
+    padding: 10px;
+  }
+  #desc{
+    padding: 10px;
+  }
+  #filter{
+    padding: 10px;
+  }
+  #btn{
+    margin: auto 0;
+    padding: 10px;
+  }
+  #allt {
+    padding: 30px;
+  }
+  #filtered{
+    padding: 30px;
+  }
+  .left-section,
+  .right-section {
+    width: 45%;
+  }
+  
+  #heading {
+    font-size: 34px;
+    color: #333;
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+
+  input {
+    padding: 7px;
+    font-size: 20px;
+  }
+  
+
+  
+  #t1 input[type="text"],
+  #desc input[type="text"],
+  #filter input[type="text"] {
+    font-size: 16px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  #allt,
+  #filtered {
+    margin-top: 20px;
+  }
+  
+  .todo {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .todo h1 {
+    font-size: 20px;
+    color: #333;
+  }
+  
+  .todo h3 {
+    font-size: 16px;
+    color: #666;
+  }
+  
