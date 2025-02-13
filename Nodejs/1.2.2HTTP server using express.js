@@ -5,6 +5,7 @@ const bodyparser=require("body-parser");
 const app=express();
 const port=process.env.PORT||3000;  //process.env.PORT is a way to access environment variable
 app.use(bodyparser.json());
+//koob
 
 app.post("/conversation",function(req,res){ //   /conversation is the route 
     console.log(req.query.message);//reads what is after url :?message=123
